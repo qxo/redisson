@@ -206,6 +206,7 @@ public class BaseMasterSlaveServersConfig<T extends BaseMasterSlaveServersConfig
         this.subscriptionConnectionPoolSize = subscriptionConnectionPoolSize;
         return (T) this;
     }
+
     public int getSubscriptionConnectionPoolSize() {
         return subscriptionConnectionPoolSize;
     }
@@ -265,6 +266,12 @@ public class BaseMasterSlaveServersConfig<T extends BaseMasterSlaveServersConfig
         return subscriptionConnectionMinimumIdleSize;
     }
 
+    public T setSlaveSubscriptionConnectionPoolSize(int subscriptionConnectionPoolSize) {
+        return setSubscriptionConnectionPoolSize(subscriptionConnectionPoolSize);
+    }
+    public T setSlaveSubscriptionConnectionMinimumIdleSize(int subscriptionConnectionMinimumIdleSize) {
+        return setSubscriptionConnectionMinimumIdleSize(subscriptionConnectionMinimumIdleSize);
+    }
     
     /**
      * Set node type used for read operation.
